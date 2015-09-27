@@ -1,0 +1,6 @@
+{ "dialog" :
+    {
+        "won": ["I rule!", "Ha! A true Pyrrhic victory!", "Great victory requires great risk!", "Shame on you!", "Winning may not be everything, but losing has little to recommend it!", "A strategic victory seen as luck by laymen!", "Future is ours, but victory is mine!", "Veni, Vidi, Vici. (I came, I saw, I conquered)!", "There is no substitute for victory!", "I just can't help it. I'm too good!"],
+        "lost": ["Darn!", "The fight isn't over!", "An honorable defeat is better than a dishonorable victory.", "You may win now, but next time I’ll steal your trophy.", "The harder the fight, the greater the victory.", "Even if I were to lose, I'd win at losing.", "Short wins do not guarantee long victories.", "Victory with fear is hollow, endurance with resilience is triumph.", "It’s better to be the rooster than the feather duster!", "One of the greatest victories you can gain over someone is to beat him at politeness."]
+    }
+}

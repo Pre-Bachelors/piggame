@@ -1,0 +1,10 @@
+#mid figure {
+    display: inline-block;
+    position: relative;
+    figcaption {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #523434;
+    }
+}

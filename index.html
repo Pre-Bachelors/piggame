@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Pig Game</title>
+        <link type="text/css" rel="stylesheet" href="styles/css/jquery-ui.min.css" />
+        <link type="text/css" rel="stylesheet" href="styles/css/main.css" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- <h1>The Pig Game</h1> -->
+            <header class="accordion">
+                <h3 class="title">Rules</h3>
+                <div class="content">
+                    <p>During your turn, you can take two possible paths:</p>
+                    <ul>
+                        <li>Roll the die - if you roll 1, your turn total becomes 0 and it becomes your opponent's turn; otherwise, you add the amount you rolled to your turn total.</li>
+                        <li>Hold - your turn total is added to your points and your turn ends.</li>
+                    </ul>
+                    <p>The first player to reach 100 points wins!</p>
+                </div>
+            </header>
+            <main>
+                <div id="right">
+                    <div class="score">
+                        <h4>Your score</h4>
+                        <span id="pScore"></span>
+                    </div>
+                    <div class="interactive" id="player"> <!-- player -->
+                        <img src="res/player.gif" alt="Player" />
+                    </div>
+                </div>
+                <div id="mid">
+                    <div>
+                        <h4>Turn Total</h4>
+                        <span id="turnPoints"></span>
+                    </div>
+                   <div>
+                        <h4>Random Fun True Fact</h4>
+                        <span id="fact"></span>
+                    </div> 
+                    <div>
+                        <a id="roll">
+                            <figure>
+                                <img src="res/roll.png" alt="Roll"/>
+                                <figcaption>Roll</figcaption>
+                            </figure>
+                        </a> <!-- roll -->
+                        <a id="hold">
+                            <figure>
+                                <img src="res/hold.png" alt="Hold"/>
+                                <figcaption>Hold</figcaption>
+                            </figure>
+                        </a> <!-- hold -->
+                    </div>
+                </div>
+                <div id="left">
+                    <div class="score">
+                        <h4>Opponent's score</h4>
+                        <span id="cScore"></span>
+                    </div>
+                    <div class="interactive" id="pig"> <!-- pig -->
+                        <img src="res/pig.gif" alt="Pig"/>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                &copy; 2014 <h4>Beatriz Borges</h4>
+                <button id="credits-modal">Credits</button>
+            </footer>
+            
+            <!-- Credits (hidden) -->
+            <div id="credits">
+                <ul>
+                    <li><a href="http://imgarcade.com/1/rolling-dice-cartoon/">Roll image</a></li>
+                    <li><a href="http://sharpsandflats.com/dice_02.html">Hold image</a></li>
+                    <li><a href="http://www.heathersanimations.com/men/3d013.gif">Player image</a></li>
+                    <li><a href="http://www.heathersanimations.com/pigs/p120.gif">Pig image</a></li>
+                    <li><a href="http://www.heathersanimations.com/men/013.gif">Victory image</a></li>
+                    <li><a href="http://www.heathersanimations.com/men/a1072.gif">Defeat image</a></li>
+                    <li><a href="http://www.fatcow.com/free-icons">Bullet points</a></li>
+                    <div class="accordion">
+                        <ul><h4 class="title contracted">Dice images</h4>
+                            <div class="content">
+                                <li><a href="http://vector.me/browse/323097/dado_1">Face 1 from VECTOR.ME (by rg1024)</a></li>
+                                <li><a href="http://vector.me/browse/323094/dado_2">Face 2 from VECTOR.ME (by rg1024)</a></li>
+                                <li><a href="http://vector.me/browse/323091/dado_3">Face 3 from VECTOR.ME (by rg1024)</a></li>
+                                <li><a href="http://vector.me/browse/323088/dado_4">Face 4 from VECTOR.ME (by rg1024)</a></li>
+                                <li><a href="http://vector.me/browse/323085/dado_5">Face 5 from VECTOR.ME (by rg1024)</a></li>
+                                <li><a href="http://vector.me/browse/323082/dado_6">Face 6 from VECTOR.ME (by rg1024)</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="accordion">
+                        <ul><h4 class="title contracted">Random true facts</h4>
+                            <div class="content">
+                                <li><a href="http://www.buzzfeed.com/daves4/77-facts-that-sound-like-huge-lies-but-are-completely-true">Buzz Feed 1</a></li>
+                                <li><a href="http://www.buzzfeed.com/readcommentbackwards/62-amazing-fact-you-probably-didnt-know-that-will-dmjk">Buzz Feed 2</a></li>
+                                <li><a href="http://www.mirror.co.uk/news/weird-news/humans-share-50-dna-bananas-2482139">Mirror</a></li>
+                                <li><a href="http://health.howstuffworks.com/human-body/parts/16-unusual-facts-about-the-human-body1.htm">How Stuff Works - Health</a></li>                             
+                                <li><a href="http://www.todayifoundout.com/index.php/2013/06/20-amazing-quick-facts/">Today I Found Out</a>.</li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="accordion">
+                        <ul><h4 class="title contracted">Themes</h4>
+                            <div class="content">
+                                <li><a href="http://subtlepatterns.com/old-map/">Old Map</a></li>
+                                <li><a href="http://subtlepatterns.com/tree-bark/">Tree Bark</a></li>
+                                <li><a href="http://subtlepatterns.com/random-grey-variations/">Random Grey Variations</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/modal.js"></script>
+        <script src="js/accordion.js"></script>
+        <script src="js/interactions.js"></script>
+        <script src="js/game.js"></script>
+    </body>
+</html>

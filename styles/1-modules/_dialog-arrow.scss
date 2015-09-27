@@ -1,0 +1,44 @@
+/* Based on and adapted from David Vega's article at 
+ * http://blog.crowdint.com/2012/10/03/draw-arrows-and-pretty-tooltip-boxes-with-pure-css.html 
+ */
+
+$border-color: #484444;
+$dialog-background-color: #eee;
+
+#phrase:after, #phrase:before
+{
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    border-style: solid;
+    width: 0;
+    height: 0;
+}
+
+#phrase:before
+{
+    border-color: $border-color transparent transparent transparent;
+    border-width: 15px 15px 0 6px;
+    left: 11px;
+}
+
+#phrase:after
+{
+    border-color: $dialog-background-color transparent transparent transparent;
+    border-width: 12px 11px 0 4px;
+    left: 14px;
+}
+
+#phrase
+{
+    position: relative;
+    border: 3px solid $border-color;
+    background-color: $dialog-background-color;
+    padding: 6px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    max-width: 190px;
+    font-weight: 200;
+    line-height: 1.2em;
+}

@@ -1,0 +1,41 @@
+#modal {
+    background:  #aa876e;
+    overflow: auto;
+    padding: 8px;
+    border-radius: 5px;
+    min-width: 370px;
+    max-width: 450px;
+    font-size: 16px;
+    h2 {
+        margin-left: 20px;
+        color: #34231e;
+        font-size: 1.2em;
+        font-weight: bold;    
+    }
+    blockquote {
+        display: block;
+        margin: 10px 5px;
+        font-size: 16px;
+        font-style: italic;
+    }
+    #author {
+        font-style: italic;
+        font-size: 80%;
+        float: right;
+    }
+    img {
+        float: left;
+        margin-right: 10px;
+        max-width: 200px;
+    }
+}
+
+#button-align {
+    width: auto;
+    float: right;
+    margin-right: 10px; 
+    margin-top: 5px;
+    #modal-restart {
+        margin-right: 10px; 
+    }
+}

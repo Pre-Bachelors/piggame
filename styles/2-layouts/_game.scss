@@ -1,0 +1,77 @@
+html {
+    font-family: $helvetica;
+    background: url("../../res/old_map.png");
+    overflow: hidden;
+}
+
+#wrapper {
+    @include padding(15px 15px);
+    @include margin(30px auto null);
+    background: rgba(152, 116, 81, 0.7);
+    width: 95%;
+    h3 {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    h4 {
+        font-weight: bold;
+    }
+}
+
+main {
+    margin-top: 20px;
+    button {
+        margin-top: 4px;
+        float: right;
+    }
+    #pScore, #cScore, #turnPoints, #fact {
+        display:inline-block;
+        margin-top: 5px;
+    }
+    #pScore, #cScore, #turnPoints {
+        font-family: "Courier New";
+        font-weight: 300;
+        font-size: 20px;
+    }
+    #fact {
+        line-height: 1.1em;
+    }
+}
+
+#mid {
+    padding-top: 20px;
+    @include radial-gradient(#baad9e 10%, #88755e, $fallback: #88755e);
+    h4 {
+        @include margin(0px 4px);
+    }
+    span {
+        @include margin(3px null);
+        padding: 4px;
+    }
+    #turnPoints {
+        text-align: center;
+    }
+    div {
+        padding: 4px;
+        margin-bottom: 20px;
+        &:nth-child(2) {
+            padding: 4px;
+            @include radial-gradient(#cfc7be 10%, rgba(207, 199, 190, 0.0), $fallback: rgba(207, 199, 190, 0.45));
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    #roll, #hold {
+        cursor: pointer;
+    }
+}
+
+footer {
+    button {
+        float: right;
+    }
+    h4 {
+        display: inline-block;
+    }
+}

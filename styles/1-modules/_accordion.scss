@@ -1,0 +1,33 @@
+$expander-toggle-arrow-size: 0.75em;
+$margin-bot: 5px;
+
+.accordion {
+    .title {
+        padding: 5px;
+        margin-bottom: 0px;    
+        color: #d4c5c5;
+        background: url("../../res/random_grey_variations.png");
+        cursor: pointer;
+        &:before {
+            content: '\25BC';
+            margin-right: .95em;
+            font-size: $expander-toggle-arrow-size;
+        }
+    }       
+    .title.contracted{
+        margin-bottom: $margin-bot;
+        &:before {
+            content: '\25BA';
+            margin-right: 1em; 
+            @include position(relative, -2px -2px null null);
+        }
+    }
+    .content {
+        @include padding(7px 15px 2px);
+        background: url("../../res/tree_bark.png");     
+        margin-bottom: $margin-bot;
+        p:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+$link-color: #91452f;
+$link-hover-color: #723c2c;
+
+#credits {
+    background:  #aa876e;
+    @include padding(1px 10px);
+    ul {
+        padding: 0;
+        @include no-bullets;
+        li {
+            // first margin top too
+            margin-bottom: 5px;
+            a {
+                @include link-colors($link-color, $link-hover-color);
+                @include hover-link;
+            }
+        }
+    }
+    .content {
+        display: none;
+        background: #cea486;
+    }
+}

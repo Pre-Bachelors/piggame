@@ -1,0 +1,13 @@
+$footer-height: 30px;
+
+footer {
+    @include padding(14px 20px null);
+    color: #d4c5c5;
+    background: url("../../res/random_grey_variations.png");
+    height: $footer-height;
+    @include position(absolute, null 0 0 0);    
+    #credits-modal {
+        position: relative;
+        top: -15%;
+    }
+}

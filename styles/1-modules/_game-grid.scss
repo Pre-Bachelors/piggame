@@ -1,0 +1,55 @@
+$main-grid-columns: 12;
+$main-grid-side-span: 3;
+$main-grid-mid-span: 6;
+$sub-grid-columns: 15;
+$sub-grid-side-margin: 1;
+
+main {
+    @include container;
+}
+
+#right {
+    @include span($main-grid-side-span of $main-grid-columns);
+}
+
+#left {
+    @include span($main-grid-side-span of $main-grid-columns last);
+}
+
+#mid {
+    @include span($main-grid-mid-span of $main-grid-columns);
+    div {
+        &:first-child {
+            vertical-align: top;
+            display: inline-block;
+            margin-left: span($sub-grid-side-margin of $sub-grid-columns);
+            width: span(3 of $sub-grid-columns);
+            span {
+                padding-left: 30px;
+            }
+        }
+        &:nth-child(2) {
+            display: inline-block;
+            @include margin(0 span($sub-grid-side-margin of $sub-grid-columns));
+            width: span(9 of $sub-grid-columns);
+        }
+        &:nth-child(3) {
+            margin-top: 20px;
+        }
+        #roll figure, #hold figure {
+            vertical-align: top;
+            margin-left: span($sub-grid-side-margin of $sub-grid-columns);
+            @include size(span(6 of $sub-grid-columns));
+            img {
+                max-width: 100%;
+            }
+        }
+        #hold figure{
+            margin-right: span($sub-grid-side-margin of $sub-grid-columns);
+        }
+    }
+}
+
+#right, #left, #mid {
+    min-height: 350px;
+}

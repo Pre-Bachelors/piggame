@@ -1,0 +1,16 @@
+$btn-color: #d93c0d;
+$btn-text-color: #ddd;
+
+button {
+    padding: 6px;
+    background: $btn-color;
+    color: $btn-text-color;
+    border: none;
+    border-radius: 4px;
+    text-shadow: 2px 2px 3px #000;
+    &:hover {
+        background: shade($btn-color, 40%);
+        color: tint($btn-text-color, 20%);    
+        cursor: pointer;
+    }
+}

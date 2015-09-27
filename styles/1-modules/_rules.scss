@@ -1,0 +1,14 @@
+header {
+    p {
+        @include padding(8px null 6px);
+    }
+    ul {
+        @include pretty-bullets("../res/bullet-orange-icon.png", $padding: 20px);
+        li {
+            @include margin(null 8px 3px);
+        }
+        &:nth-child(2) {
+            margin-top: 0;
+        }
+    }
+}
